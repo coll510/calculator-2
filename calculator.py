@@ -4,7 +4,7 @@ Using the arithmetic.py file from Calculator Part 1, create the
 calculator program yourself in this file.
 """
 
-from arithmetic import add,subtract,multiply,divide,square,cube,power,mod
+from arithmetic import *
 
 # Your code goes here
 def calculator():
@@ -13,7 +13,6 @@ def calculator():
         tokens = user_input.split(" ")
         try:
             operator = tokens[0]
-            #print(tokens)
             num1 = int(tokens[1])
             num2 = int(tokens[2])
         except IndexError:
