@@ -4,7 +4,7 @@ Using the arithmetic.py file from Calculator Part 1, create the
 calculator program yourself in this file.
 """
 
-from arithmetic import add
+from arithmetic import add,subtract,multiply,divide,square,cube,power,mod
 
 # Your code goes here
 def calculator():
@@ -13,13 +13,27 @@ def calculator():
         tokens = user_input.split(" ")
         try:
             operator = tokens[0]
+            #print(tokens)
             num1 = int(tokens[1])
             num2 = int(tokens[2])
         except IndexError:
-            break
+            if operator == 'square':
+                print(square(num1))
+            elif operator == 'cube':
+                print(cube(num1))
+            else:
+                break
         if operator == '+':
                 print(add(num1, num2))
-
-        #elif tokens[0] == '-':   
+        elif operator == '-':
+                print(subtract(num1, num2))
+        elif operator == '*':
+                print(multiply(num1, num2))                
+        elif operator == '/':
+                print(divide(num1, num2))
+        elif operator == 'pow':
+                print(power(num1, num2))                
+        elif operator == 'mod':
+                print(mod(num1, num2))
 
 calculator()
